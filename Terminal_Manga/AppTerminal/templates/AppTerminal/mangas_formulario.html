@@ -1,0 +1,18 @@
+{% extends 'AppTerminal/base.html' %}
+
+{% load static %}
+
+{% block title %} Formulario - Agregar Manga {% endblock title %}
+
+{% block main %}
+    <!-- action: representa la url a la que nos va a re-dirigir y enviar la info.
+    Tiene prioridad por sobre la redirección que podamos colocar en views.py -->
+    <form action="/mangas-formulario/" method="POST">
+        {% csrf_token %}
+        <p>Mangas: <input type="text" name="mangas"></p>
+        <p>Tomos: <input type="text" name="tomos"></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock main %}

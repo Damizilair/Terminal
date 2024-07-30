@@ -1,8 +1,8 @@
 from django.db import models
 
 class Mangas(models.Model):
-    Anime = models.CharField(max_length=40)
-    Arco = models.IntegerField()
+    nombre = models.CharField(max_length=40)
+    Tomos = models.IntegerField()
 
 class Usuarios(models.Model):
     nombre = models.CharField(max_length=40)
